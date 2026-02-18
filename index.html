@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css"> <!-- link to css file -->
   
   <title>Frontend Mentor | Clipboard landing page</title>
 
@@ -16,15 +17,20 @@
 </head>
 <body>
 
+<section class="hero" id="hero">
   <!-- SECTION 1: ERNEST (Hero) -->
-  A history of everything you copy
+<img src="./images/logo.svg" alt="Logo">
+  <h1 class="Ernest">A history of everything you copy</h1>
 
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
+  <p class="Ernest">Clipboard allows you to track and organize everything you 
+  copy. Instantly access your clipboard on all your devices.</p>
 
-  Download for iOS
-  Download for Mac
+  <div class="buttons">
+  <a href="#" target="_blank">Download for iOS</a>
+  <a href="#" target="_blank">Download for Mac</a>
+  </div>
   <!-- END SECTION 1 -->
+</section>
 
   <!-- SECTION 2: ELIJAH (Snippets & Features) -->
   Keep track of your snippets
@@ -71,28 +77,45 @@
   Quick preview of all snippets on your Clipboard for easy access.
   <!-- END SECTION 4 -->
 
+<section id="cta" class="cta">
   <!-- SECTION 5: ERNEST (Call to Action - Residual) -->
-  Clipboard for iOS and Mac OS
+  <h2 class="Ernest">Clipboard for iOS and Mac OS</h2>
 
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
+  <p class="Ernest">Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+  and you’re ready to start adding to your clipboard.</p>
 
-  Download for iOS
-  Download for Mac
+  <div class="buttons">
+  <a href="#" target="_blank">Download for iOS</a>
+  <a href="#" target="_blank">Download for Mac</a>
+  </div>
   <!-- END SECTION 5 -->
+</section>
 
   <!-- SECTION 6: ERNEST (Footer - Residual) -->
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
+<footer>
+  <section id="official" class="official">
+    <img src="./images/logo.svg" alt="Logo">
+    <ul class="footer-links">
+      <li class="Ernest"><a href="#">FAQs</a></li>
+      <li class="Ernest"><a href="#">Contact Us</a></li>
+      <li class="Ernest"><a href="#">Privacy Policy</a></li>
+      <li class="Ernest"><a href="#">Press Kit</a></li>
+      <li class="Ernest"><a href="#">Install Guide</a></li>
+    </ul>
+
+    <div class="social-icons">
+      <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="./images/icon-instagram.svg" alt="Instagram"></a>
+    </div>
+  </section>
+
+<section id="attribution" class="attribution">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
+</section>
   </footer>
   <!-- END SECTION 6 -->
 </body>
