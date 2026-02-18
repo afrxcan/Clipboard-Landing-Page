@@ -6,7 +6,7 @@
 body {
     font-family: 'Bai Jamjuree', sans-serif;
     margin: 0;
-    background-image: url(./images/bg-header-desktop.png);
+    background-image: url(./images/bg-header-mobile.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -111,6 +111,7 @@ footer {
 
 .official img {
     width: 50px;
+    height: auto;
 }
 
 .footer-links {
@@ -137,6 +138,7 @@ footer {
     gap: 25px;
     img {
         width: 20px;
+        height: auto;
         transition: opacity 0.9s;
     }
     img:hover {
@@ -146,6 +148,10 @@ footer {
 
 /* Desktop Layout Adjustments */
 @media (min-width: 768px) {
+    body {
+        background-image: url(./images/bg-header-desktop.png);
+    }
+
     .buttons {
         flex-direction: row;
         padding: 0; 
