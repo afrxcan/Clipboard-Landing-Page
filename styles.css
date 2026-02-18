@@ -1,6 +1,4 @@
-/* Importing the font file */
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
-
+/* Global Styles */
 * {
     box-sizing: border-box;
 }
@@ -13,6 +11,7 @@ body {
     background-size: contain;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 130px 20px 50px;
@@ -35,6 +34,7 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Reusable Button Styles */
 .buttons {
     display: flex;
     justify-content: center;
@@ -55,11 +55,13 @@ body {
     transition: opacity 0.7s;
 }
 
+/* iOS Button (Green) */
 .buttons a:nth-child(1) {
     background-color: hsl(171, 66%, 44%);
     box-shadow: 0 10px 20px -10px hsl(171, 66%, 44%);
 }
 
+/* Mac Button (Blue) */
 .buttons a:nth-child(2) {
     background-color: hsl(233, 100%, 69%);
     box-shadow: 0 10px 20px -10px hsl(233, 100%, 69%);
@@ -69,6 +71,7 @@ body {
     opacity: 0.8;
 }
 
+/* Call to Action Section */
 .cta {
     text-align: center;
     padding: 50px 20px;
@@ -91,6 +94,7 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Footer Section */
 footer {
     background-color: hsl(220, 18%, 97%);
     padding: 50px 0;
@@ -104,7 +108,6 @@ footer {
     text-align: center;
     gap: 30px;
 }
-
 
 .official img {
     width: 50px;
@@ -141,7 +144,7 @@ footer {
     }
 }
 
-/* DESKTOP LAYOUT */
+/* Desktop Layout Adjustments */
 @media (min-width: 768px) {
     .buttons {
         flex-direction: row;
@@ -160,6 +163,7 @@ footer {
         padding: 0 20px;
     }
 
+    /* Push logo slightly right on desktop only */
     .official .footer-logo {
         margin-left: 70px;
     }
