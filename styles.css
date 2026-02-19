@@ -182,3 +182,33 @@ footer {
         text-align: left;
     }
 }
+
+
+.access-section {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.text h2 {
+    color: hsl(210, 10%, 33%);
+    font-weight: 600;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.text p {
+     color: hsl(201, 11%, 66%);
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.devices {
+    margin-top: 80px;
+}
+
+.devices img {
+    width: 900px;
+    max-width: 95%;
+}
