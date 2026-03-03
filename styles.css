@@ -218,6 +218,56 @@ footer {
     width: 900px;
     max-width: 100%;
 }
+/* Snippets section */
+.snippets {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.snippets .intro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: hsl(201, 11%, 66%);
+    line-height: 1.6;
+}
+
+.snippets-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+}
+
+.snippets .card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 24px;
+    box-shadow: 0 12px 24px -14px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.snippets .card h3 {
+    font-size: 1.05rem;
+}
+
+.snippets .card p {
+    font-size: 0.95rem;
+}
+
+.snippets .card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: hsl(210, 10%, 33%);
+}
+
+.snippets .card p {
+    margin: 0;
+    color: hsl(201, 11%, 66%);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* icons removed — headings stay left-aligned on desktop */
 /* Supercharge styling */
 .workflow {
     padding: 80px 20px;
@@ -283,6 +333,63 @@ footer {
     }
     .logos {
         flex-direction: column;
+    }
+}
+
+@media (min-width:768px) {
+    .snippets-grid {
+        grid-template-columns: 1fr; /* keep cards stacked vertically */
+        max-width: 320px;
+    }
+}
+
+/* Layout for visual + cards side-by-side */
+.snippets-inner {
+    display: block;
+}
+
+.snippets-visual img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .snippets-inner {
+        display: grid;
+        grid-template-columns: 420px 1fr; /* image on left (narrower), cards stacked on right */
+        gap: 32px;
+        align-items: start;
+    }
+
+    .snippets .intro {
+        text-align: left;
+    }
+
+    .snippets .card {
+        text-align: left;
+    }
+}
+
+/* Ensure card stack height matches the PC image on wide screens */
+@media (min-width: 992px) {
+    .snippets-visual img {
+        max-height: 560px; /* return to larger monitor height */
+        width: auto;
+        display: block;
+    }
+
+    .snippets-grid {
+        display: flex;
+        flex-direction: column;
+        /* natural height, just small gaps */
+        padding-left: 60px; /* push text right into monitor area */
+    }
+
+    .snippets .card {
+        margin-bottom: 4px; /* minimal gap, almost continuous */
+        border-radius: 24px;
     }
 }
 .container {
