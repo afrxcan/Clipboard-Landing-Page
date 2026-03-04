@@ -11,6 +11,11 @@ body {
     background-size: contain;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
@@ -32,6 +37,65 @@ body {
     font-weight: 400;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+/* Snippets & Features */
+.snippets {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.snippets-intro {
+    max-width: 700px;
+    margin: 0 auto 80px;
+}
+
+.snippets h2 {
+    color: hsl(210, 10%, 33%);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.snippets p {
+    color: hsl(201, 11%, 66%);
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.features-image {
+    width: 100%;
+}
+
+.features-image img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.features-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.feature-item h3 {
+    color: hsl(210, 10%, 33%);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    color: hsl(201, 11%, 66%);
+    line-height: 1.6;
 }
 
 /* Reusable Button Styles */
@@ -69,6 +133,104 @@ body {
 
 .buttons a:hover {
     opacity: 0.8;
+}
+
+/* Access Section */
+.access-section {
+    text-align: center;
+    padding: 100px 20px;
+    margin: 0 auto;
+}
+
+.access-section .content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.access-section h2 {
+    color: hsl(210, 10%, 33%);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.access-section p {
+    color: hsl(201, 11%, 66%);
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.devices {
+    margin-top: 80px;
+}
+
+.devices img {
+    width: 900px;
+    max-width: 100%;
+}
+
+/* Workflow Section */
+.workflow {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.workflow h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: hsl(210, 10%, 33%);
+}
+
+.section-text {
+    color: hsl(201, 11%, 66%);
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.log {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.workflow-item img {
+    margin-bottom: 20px;
+}
+
+.workflow-item h3 {
+    margin-bottom: 10px;
+    color: hsl(210, 10%, 33%);
+}
+
+.workflow-item p {
+    color: hsl(201, 11%, 66%);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Company Logos */
+.companies {
+    padding: 80px 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.logos img {
+    max-width: 120px;
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.logos img:hover {
+    opacity: 1;
 }
 
 /* Call to Action Section */
@@ -136,20 +298,48 @@ footer {
 .social-icons {
     display: flex;
     gap: 25px;
-    img {
-        width: 20px;
-        height: auto;
-        transition: opacity 0.9s;
-    }
-    img:hover {
-        opacity: 0.8
-    }
+}
+
+.social-icons img {
+    width: 20px;
+    height: auto;
+    transition: opacity 0.9s;
+}
+
+.social-icons img:hover {
+    opacity: 0.8;
 }
 
 /* Desktop Layout Adjustments */
 @media (min-width: 768px) {
     body {
         background-image: url(./images/bg-header-desktop.png);
+    }
+
+    .features-grid {
+        flex-direction: row;
+        text-align: left;
+        gap: 100px;
+    }
+
+    .features-image {
+        flex: 1;
+        margin-left: -150px;
+    }
+
+    .features-image img {
+        max-width: none;
+        width: auto;
+    }
+
+    .features-list {
+        flex: 1;
+        text-align: left;
+        padding-top: 50px;
+    }
+
+    .feature-item p {
+        margin: 0;
     }
 
     .buttons {
@@ -161,6 +351,11 @@ footer {
         width: auto;
     }
 
+    .log {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .official {
         flex-direction: row;
         justify-content: space-between;
@@ -169,7 +364,6 @@ footer {
         padding: 0 20px;
     }
 
-    /* Push logo slightly right on desktop only */
     .official .footer-logo {
         margin-left: 70px;
     }
@@ -183,219 +377,19 @@ footer {
     }
 }
 
-
-.access-section {
-    text-align: center;
-    padding: 100px 20px;
-    margin: 0 auto;
-}
-
-.access-section .content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.access-section h2 {
-    color: hsl(210, 10%, 33%);
-    font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.access-section p {
-    color: hsl(201, 11%, 66%);
-    line-height: 1.6;
-    font-weight: 400;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.devices {
-    margin-top: 80px;
-}
-
-.devices img {
-    width: 900px;
-    max-width: 100%;
-}
-/* Snippets section */
-.snippets {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.snippets .intro {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: hsl(201, 11%, 66%);
-    line-height: 1.6;
-}
-
-.snippets-grid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 1fr;
-    align-items: stretch;
-}
-
-.snippets .card {
-    background: #fff;
-    padding: 18px;
-    border-radius: 24px;
-    box-shadow: 0 12px 24px -14px rgba(0,0,0,0.15);
-    text-align: left;
-}
-
-.snippets .card h3 {
-    font-size: 1.05rem;
-}
-
-.snippets .card p {
-    font-size: 0.95rem;
-}
-
-.snippets .card h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    color: hsl(210, 10%, 33%);
-}
-
-.snippets .card p {
-    margin: 0;
-    color: hsl(201, 11%, 66%);
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* icons removed — headings stay left-aligned on desktop */
-/* Supercharge styling */
-.workflow {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.workflow h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.section-text {
-    color: #888;
-    max-width: 600px;
-    margin:0 auto 50px;
-}
-
-.workflow-grig {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.workflow-item img {
-    margin-bottom: 20px;
-}
-
-.workflow-item h3 {
-    margin-bottom: 10px;
-}
-
-.workflow-item p {
-    color: #777;
-    font-size: 0.95rem;
-}
-
-/* Company logos styling */
-.companies {
-    padding: 80px 20px;
-}
-
-.logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.logos img {
-    max-width: 120px;
-    opacity: 0.7;
-    transition: 0.3s ease;
-}
-
-.logos img:hover {
-    opacity: 1;
-}
-
-@media (max-width:600px) {
-    .workflow-grig {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .features-image {
+        margin-left: 0;
     }
+    
+    .features-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
     .logos {
         flex-direction: column;
     }
-}
-
-@media (min-width:768px) {
-    .snippets-grid {
-        grid-template-columns: 1fr; /* keep cards stacked vertically */
-        max-width: 320px;
-    }
-}
-
-/* Layout for visual + cards side-by-side */
-.snippets-inner {
-    display: block;
-}
-
-.snippets-visual img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-@media (min-width: 992px) {
-    .snippets-inner {
-        display: grid;
-        grid-template-columns: 420px 1fr; /* image on left (narrower), cards stacked on right */
-        gap: 32px;
-        align-items: start;
-    }
-
-    .snippets .intro {
-        text-align: left;
-    }
-
-    .snippets .card {
-        text-align: left;
-    }
-}
-
-/* Ensure card stack height matches the PC image on wide screens */
-@media (min-width: 992px) {
-    .snippets-visual img {
-        max-height: 560px; /* return to larger monitor height */
-        width: auto;
-        display: block;
-    }
-
-    .snippets-grid {
-        display: flex;
-        flex-direction: column;
-        /* natural height, just small gaps */
-        padding-left: 60px; /* push text right into monitor area */
-    }
-
-    .snippets .card {
-        margin-bottom: 4px; /* minimal gap, almost continuous */
-        border-radius: 24px;
-    }
-}
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-.log {
-    display: flex;
 }
